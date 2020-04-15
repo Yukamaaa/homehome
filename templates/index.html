@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>テストアプリ</title>
+        <script>
+        const updateExist = async(url, element) => {
+            const sensorData = await fetch(url)
+            .then(response => response.text())
+            const target = document.getElementById(element)
+            target.innerHTML = `<h1>${sensorData}</h1>`
+            }
+        </script>
+    </head>
+    <body onLoad="updateExist('/exist', 'data')">
+        <center>
+            <div id = "data">test</div>
+            <input type="button" value="更新" onclick="updateExist('/exist', 'data')">
+        </center>
+    </body>
+</html>
