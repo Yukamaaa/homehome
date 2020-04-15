@@ -9,11 +9,12 @@ def get_html():
 
 @app.route('/exist', methods = ['POST'])
 def update_exist():
+    date = request.form["date"]
     time = request.form["time"]
     exist = request.form["exist"]
     try:
         f = open(file_path, 'w')
-        f.write(time + "," + exist)
+        f.write(date + "," + time + "," + exist)
         return "succeeded to write"
     except Exception as e:
         print(e)
