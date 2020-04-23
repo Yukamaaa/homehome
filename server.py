@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+
 app = Flask(__name__)
 file_path = "./sensor_data.csv"
 port_num = 17104
@@ -25,7 +26,7 @@ def update_exist():
 @app.route('/exist', methods = ['GET'])
 def get_exist():
     try:
-        f = open(file_path, 'r')
+        f = open(file_path1, 'r')
         for row in f:
             exist = row
     except Exception as e:

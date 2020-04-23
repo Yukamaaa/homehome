@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>テストアプリ</title>
+        <title>褒めるくん</title>
         <link rel="stylesheet" href="/static/css/style.css">
         <script src="/static/js/script.js"></script>
     </head>
-    <body onLoad="updateExist('/exist', 'data')">
-        <div class="resizeimage">
-            <img src="/static/images/neko.jpg">
-        </div>
-        <center>
-            <p>今日の合計時間</p>
-            <div id = "data">test</div>
-            <input type="button" value="更新" onclick="updateExist('/exist', 'data')">
-            <input type="button" value="投稿" onclick="slack()">
-            <br>
-            <P>1週間の頑張り</P>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=c2hpYmF1cmEtaXQuYWMuanBfMGVkNDU3M2hjbWVnMzh0OTA3a203ZWZpNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK" style="border-width:0" width="750" height="600" frameborder="0" scrolling="no"></iframe>
-            <br>
-            <p>1カ月の頑張り</p>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=c2hpYmF1cmEtaXQuYWMuanBfMGVkNDU3M2hjbWVnMzh0OTA3a203ZWZpNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=MONTH" style="border-width:0" width="750" height="500" frameborder="0" scrolling="no"></iframe>
 
-        </center>
+    <body onLoad="foo();">
+        <header id="header">
+            <div class="resizeimage">
+                <img src="/static/images/neko.jpg">
+            </div>
+        </header>
+        
+        <div id="side">
+            <center>
+
+            </center>
+        </div>
+
+        <main id="main">
+            <center>
+                <h1>現在取得されている値</h1>
+                <div id = "data">test</div>
+                <h1>今日の合計時間</h1>
+                <div id= "sum">test2</div>
+
+                <input type="button" value="リロード" onclick="foo();">
+                <input type="button" value="ほめて！" onclick="slack();">
+                <br>
+                <h1>これまでのがんばり</h1>
+                <h2>1週間の記録</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=c2hpYmF1cmEtaXQuYWMuanBfMGVkNDU3M2hjbWVnMzh0OTA3a203ZWZpNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK" style="border-width:0" width="500" height="600" frameborder="0" scrolling="no"></iframe>
+                <br>
+                <h2>1カ月の記録</h2>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=c2hpYmF1cmEtaXQuYWMuanBfMGVkNDU3M2hjbWVnMzh0OTA3a203ZWZpNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=MONTH" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+
+            </center>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
     </body>
 </html>

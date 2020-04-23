@@ -2,6 +2,29 @@
 
 body{
     background: white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header{
+    width: 100%;
+}
+
+#main{
+    width: 70%;
+    float: right;
+}
+
+#side{
+    background-color: teal;
+    width: 30%;
+    float: left;
+}
+
+#footer{
+    background-color: yellowgreen;
+    clear: both;
+    width: 100%;
 }
 
 .resizeimage img{

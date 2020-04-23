@@ -1,19 +1,30 @@
-/* 更新ボタン */
+/* ページの自動更新 */
+setTimeout(function(){
+    location.reload();
+}, 60000);
 
+/* データの更新 */
 const updateExist = async(url, element) => {
     const sensorData = await fetch(url)
     .then(response => response.text())
     const target = document.getElementById(element)
-    target.innerHTML = `<h1>${sensorData}</h1>`
+    target.innerHTML = `<h3>${sensorData}</h3>`
     }
+
+/* 出席時にSlackへ投稿 */
+
+
+/* 更新 */
+function foo(){
+    updateExist('/exist', 'data');
+}
 
 
 /* Slack投稿ボタン */
-
 function slack() {
-    const url = 'https://hooks.slack.com/services/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';
+    const url = '';
     const strData = {
-        text: 'good!!!!!'
+        text: 'いつも頑張っているね！えらいぞ！'
     };
     const xml = new XMLHttpRequest();
     xml.open("POST", url, false);
